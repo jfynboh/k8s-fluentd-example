@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: fluentd
-        image: myrepositiory/myfluentd
+        image: myrepository/myfluentd
         volumeMounts:
         - name: secret
           mountPath: "/etc/secret"
