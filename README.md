@@ -11,7 +11,7 @@ docker build . -t myrepository/myfluentd:latest \
 2. create/copy your fluent.conf.
 
 
-3. Create K8S secrets, (you can add the fluent.conf file, gcp certs, etc.
+3. Create K8S secrets (you can add the fluent.conf file, gcp certs, etc...):
 kubectl -n mynamespace create secret generic mysecret --from-file=fluent.conf=./fluent.conf
 
 4. Adjust deployment descriptor (k8s/fluentd-deployment.yaml).
