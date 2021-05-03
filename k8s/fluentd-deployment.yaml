@@ -15,7 +15,7 @@ spec:
         app: fluentd
     spec:
       containers:
-      - name: fluetnd
+      - name: fluentd
         image: myrepositiory/myfluentd
         volumeMounts:
         - name: secret
