@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluentd-deployment
+  labels:
+    app: fluentd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fluentd
+  template:
+    metadata:
+      labels:
+        app: fluentd
+    spec:
+      containers:
+      - name: fluetnd
+        image: myrepositiory/myfluentd
+        volumeMounts:
+        - name: secret
+          mountPath: "/etc/secret"
+          readOnly: true
+      volumes:
+      - name: secret
+        secret:
+          secretName: mysecret
