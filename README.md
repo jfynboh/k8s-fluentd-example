@@ -15,7 +15,7 @@ docker build . -t myrepository/myfluentd:latest \
 kubectl -n mynamespace create secret generic mysecret --from-file=fluent.conf=./fluent.conf
 
 4. Adjust deployment descriptor (k8s/fluentd-deployment.yaml).
-Change  myrepositiory/myfluentd to reflect your reporpitory / image name / tags
+Change  myrepository/myfluentd to reflect your reporpitory / image name / tags
 
 5. Deploy to k8s
 kubectl -n mynamespace apply -f k8s/fluentd-deployment.yamml
